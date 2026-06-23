@@ -180,16 +180,18 @@ Forecast accuracy improved after introducing categorized holiday-event features:
 
 
 
-## Model Improvement Journey
+Model Improvement Journey
 
-| Model | Features Added | MAE | RMSE | R² |
-|---------|---------|---------|---------|---------|
-| Model 1 | Lag, Rolling Statistics, Calendar Features, Holiday Flag | 1552.36 | 2353.07 | 0.5756 |
-| Model 2 | Holiday Event Categories | 1446.58 | 2242.93 | 0.6027 |
-| Model 3 | Holiday Event Categories + Promotions | 1383.95 | 2113.87 | 0.6471 |
+| Model | Features | R² |
+|---------|---------|---------|
+| Model 1 | Baseline + Holiday Flag | 0.5756 |
+| Model 2 | Holiday Event Categories | 0.6027 |
+| Model 3 | Holiday Event Categories + Promotions | 0.6471 |
+| Model 4 | Holiday Event Categories + Promotions + Transactions | 0.8524 |
 
 Key Findings
-- Replacing a simple holiday flag with categorized holiday-event features improved forecast accuracy.
-- Incorporating promotional activity further improved performance, reducing forecast error by over 10%.
-- Weekly shopping patterns remained the strongest predictor of demand.
-- The final model explained approximately 65% of sales variation.
+- Customer transaction volume was the most important predictor of sales.
+- Adding transaction data increased model R² from 0.6471 to 0.8524.
+- Promotional activity improved forecast accuracy but had a smaller impact than customer traffic.
+- Holiday events influenced demand patterns more effectively than a simple holiday/non-holiday indicator.
+- The final model explained approximately 85% of daily sales variation.
