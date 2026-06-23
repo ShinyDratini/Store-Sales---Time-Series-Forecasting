@@ -159,3 +159,22 @@ This solution demonstrates how machine learning can support supply chain and ret
 * Supporting replenishment decisions
 * Reducing stockout risk
 * Enhancing operational efficiency
+
+
+## Improvement #1: Feature Engineering Enhancement
+
+A simple holiday indicator was replaced with categorized holiday-event features (Holiday, Event, Work Day, None). This allowed the model to differentiate between public holidays and special events, improving forecasting accuracy.
+
+| Model | MAE | RMSE | R² |
+|--------|--------|--------|--------|
+| Baseline Holiday Flag | 1552.36 | 2353.07 | 0.5756 |
+| Holiday Event Categories | 1446.58 | 2242.93 | 0.6027 |
+
+### Result
+
+Forecast accuracy improved after introducing categorized holiday-event features:
+
+- MAE decreased by **6.8%**
+- RMSE decreased by **4.7%**
+- R² increased from **0.576** to **0.603**
+
